@@ -1,4 +1,22 @@
 // Créez votre fonction ici
+function calculate(a, b, operator) {
+    const firstNumber = Number(a);
+    const secondNumber = Number(b);
+    switch (true) {
+        case operator === "+":
+            return firstNumber + secondNumber;
+        case operator === "-":
+            return firstNumber - secondNumber;
+        case operator === "*":
+            return firstNumber * secondNumber;
+        case operator === "/" && secondNumber !== 0:
+            return firstNumber / secondNumber;
+        case operator === "/" && secondNumber === 0:
+            return "Division by zero is not allowed";
+        default:
+            return "Invalid operator";
+    }
+}
 
 // Exemples d'utilisation de la fonction
 console.log(calculate(5, 3, '+'));   // Affiche 8

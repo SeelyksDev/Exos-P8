@@ -1,8 +1,21 @@
 // Créez votre fonction ici
+function calculateAverage(array) {
+    if (!array) {
+        return "No numbers to calculate average";
+    }
+    
+    let totalNumber = array.length;
+    let somme = 0;
+    
+    for(let i = 0; i < totalNumber; i++) {
+        somme += array[i];
+    }
 
-// Exemples d'utilisation de la fonction
-console.log(calculateAverage([5, 10, 15])) // retourne 10
-console.log(calculateAverage([10, 20, 30, 20])) // retourne 20
-console.log(calculateAverage()) // No numbers to calculate average
+    return somme / totalNumber;
+}
+
+console.log(calculateAverage([5, 10, 15]))
+console.log(calculateAverage([10, 20, 30, 20]))
+console.log(calculateAverage())
 
 export default calculateAverage
